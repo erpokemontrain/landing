@@ -1,0 +1,75 @@
+body {
+  background: #000000;
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.sliding-box-inner {
+  --border-width: 1px;
+  width: 100%;
+  border-radius: 12px;
+  height: 100%;
+  box-sizing: border-box;
+
+  cursor: pointer;
+  word-wrap: normal;
+  white-space: nowrap;
+  font-size: 18px;
+  display: inline-block;
+  padding: 12px 20px;
+  /* background-color: #000; */
+  color: #fff;
+}
+
+.sliding-box-add {
+  width: 50%;
+  height: 100%;
+}
+
+.sliding-box {
+  --border-width: 1px;
+  z-index: 1;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Lato, sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  background: #222;
+  border-radius: 12px;
+}
+
+.sliding-box:hover::after {
+  /* filter: blur(1px); */
+}
+
+.sliding-box::after {
+  position: absolute;
+  content: '';
+  top: calc(-1 * var(--border-width));
+  left: calc(-1 * var(--border-width));
+  z-index: -1;
+  width: calc(100% + var(--border-width) * 2);
+  height: calc(100% + var(--border-width) * 2);
+  /* filter: blur(4px); */
+  background: linear-gradient(60deg, #f26161, #f03939, #ea0909);
+  background-size: 300% 300%;
+  background-position: 0 50%;
+  border-radius: 12px;
+
+  animation: movebg 4s alternate infinite;
+}
+
+@keyframes movebg {
+  50% {
+    background-position: 100% 50%;
+  }
+}

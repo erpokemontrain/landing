@@ -1,0 +1,97 @@
+.rail__wrapper {
+  height: 1080px;
+  /* width: 1920px; */
+  width: 100%;
+  margin: auto;
+  background: #280744;
+  overflow: hidden !important;
+}
+.rail__background {
+  height: 1080px;
+  width: 100%;
+  background: url('../../assets/bg.png');
+  background-repeat: repeat-x;
+  background-position: top center;
+  background-size: 1920px;
+}
+.rail__rocks_1 {
+  position: absolute;
+  bottom: -5px;
+  height: 360px;
+  width: 100%;
+  background: url('../../assets/ro1.png');
+  background-repeat: repeat-x;
+  background-position: top center;
+  background-size: contain;
+  animation: translateX 100s infinite linear both;
+}
+.rail__rocks_2 {
+  position: absolute;
+  bottom: -60px;
+  height: 360px;
+  width: 100%;
+  background: url('../../assets/ro2.png');
+  background-repeat: repeat-x;
+  background-position: top center;
+  background-size: 1920px;
+  animation: translateX 30s infinite linear both;
+}
+.rail__rails {
+  position: absolute;
+  bottom: -110px;
+  height: 315px;
+  width: 100%;
+  background: url('../../assets/rail.png');
+  background-repeat: repeat-x;
+  background-position: top center;
+  background-size: 1920px;
+  animation: translateX 5s infinite linear both;
+}
+.rail__train {
+  position: absolute;
+  bottom: -105px;
+  height: 315px;
+  width: 1500px;
+  right: 0px;
+  background: url('../../assets/train20.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+}
+.rail__ground {
+  position: absolute;
+  width: 1920px;
+  height: 98px;
+  bottom: 0px;
+  background: #16012f;
+}
+.rail__lights {
+  position: absolute;
+  bottom: -39px;
+  height: 315px;
+  width: 1920px;
+  background: url(https://docs.google.com/uc?export=download&id=0B2PO2Lr7Bv2QNTJ1U2M1eFptSTA);
+  background-repeat: repeat-x;
+  background-position: top center;
+  background-size: contain;
+  animation: translateX 4s infinite linear both;
+}
+.rail__moon {
+  position: absolute;
+  top: 20%;
+  height: 315px;
+  left: 200px;
+  width: 120px;
+  background: url(https://docs.google.com/uc?export=download&id=0B2PO2Lr7Bv2QRTVYeVFoYVppeUU);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+}
+@keyframes translateX {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 1920px 0px;
+  }
+}
